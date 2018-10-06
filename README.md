@@ -21,3 +21,30 @@
 https://www.coolsms.co.kr/JAVA_SDK_Start_here/7342932
 
 - [ ] 회원 비밀번호 / 아이디 찾기 디자인 깨지는것 수정, 주문관리 UI 좀더 보충,  
+
+
+
+# KEY CONFIGURATIONS
+## BACKEND
+
+### (application.properties)
+spring.datasource.username
+spring.datasource.password
+
+admin.id
+admin.password
+
+spring.mail.username
+spring.mail.password
+
+### (PaymentController.java)
+getToken method
+imp_key
+imp_secret
+
+## FRONTEND
+
+### (PaymentContainer.js)
+
+IMP.init
+
