@@ -1,0 +1,27 @@
+@import 'utils';
+
+.Content {
+    padding: 1rem;
+
+    .Title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+
+    .Input {
+        margin-top: 1rem;
+        input {
+            height: 2rem;
+            font-size: 1.5rem;
+            border: 1px solid $oc-gray-4;
+            outline: none;
+        }
+    }
+
+    .Button {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}

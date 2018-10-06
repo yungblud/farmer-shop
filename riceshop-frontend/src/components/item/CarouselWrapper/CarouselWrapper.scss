@@ -1,0 +1,9 @@
+@import 'utils';
+
+.Wrapper {
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    @include media(">wide") {
+        width: 95%;
+    }
+}

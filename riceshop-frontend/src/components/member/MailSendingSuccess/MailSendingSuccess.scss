@@ -1,0 +1,33 @@
+@import 'utils';
+
+.Wrapper {
+    width: 100%;
+    height: calc(100vh - 15rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Content {
+        // width: 625px;
+        // border: 1px solid $oc-gray-3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .MailAddress {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .Description {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .Button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+    }
+}

@@ -1,0 +1,76 @@
+@import 'utils';
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower:400');
+
+.header {
+    background: white;
+    @include media("<=medium") {
+        background: $oc-green-7;
+    }
+    .header-content {
+        height: 8rem;
+        @include media("<=medium") {
+            height: 5rem;
+        }
+        width: 100%;
+        margin: 0 auto; // 중앙 정렬
+        padding-left: 3rem;
+        padding-right: 3rem;
+        display: flex;
+        align-items: center;
+        
+        position: relative;
+        @include media("<wide") {
+            width: 100%;
+        }
+        @include media("<medium") {
+            // width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .header-logo {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include media(">medium") {
+                margin: 0 auto;
+            }
+            .text {
+                font-size: 3.5rem;
+                cursor: pointer;
+                color: $oc-gray-8;
+                font-weight: 600;
+                // font-family: 'Gamja Flower';
+
+                @include media("<=medium") {
+                    font-size: 1.5rem;
+                    color: white;
+                    margin-right: auto;
+                }
+            }
+        }
+
+        .right-pc {
+            display:flex;
+            @include media("<large") {
+                display: none;
+            }
+            margin-left: auto;
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 500;
+            .menu {
+                cursor: pointer;
+            }
+            .menu + .menu {
+                margin-left: 1rem;
+            }
+        }
+        .right-mobile {
+            @include media(">=large") {
+                display: none;
+            }
+            margin-left: auto;
+        }
+    }
+}

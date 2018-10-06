@@ -1,0 +1,174 @@
+@import 'utils';
+
+.Form {
+    width: 625px;
+    margin: 0 auto;
+    @include media("<=medium") {
+        width: 100%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $oc-gray-3;
+    @include media("<=medium") {
+        border: none;
+    }
+    justify-content: center;
+
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .FindId {
+        display: flex;
+        flex-direction: column;
+        .TitleLabel {
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .TitleBorder {
+            height: 1px;
+            background: $oc-gray-7;
+        }
+        
+        .FindForm {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            // width: 100%;
+            align-items: center;
+            margin-bottom: 1rem;
+            @include media("<=medium") {
+                flex-direction: column;
+            }
+            .Input {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                width: 100%;
+                input {
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    padding: 0.25rem;
+                    border: 1px solid $oc-gray-4;
+                    outline: none;
+                    @include media("<=medium") {
+                        width: 100%;
+                    }
+                }
+
+                input + input {
+                    margin-top: 1rem;
+                }
+            }
+            .Button {
+                margin-left: 2rem;
+                height: 100%;
+                background: $oc-gray-4;
+                padding-top: 1.75rem;
+                padding-bottom: 1.75rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                text-align: center;
+                font-size: 1.25rem;
+                color: white;
+                font-weight: 500;
+                cursor: pointer;
+                user-select: none;
+                &:hover {
+                    background: $oc-gray-5;
+                }
+                &:active {
+                    background: $oc-gray-4;
+                }
+                @include media("<=medium") {
+                    margin-left: 0;
+                    padding-top: 0.25rem;
+                    padding-bottom: 0.25rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    
+                }
+            }
+        }
+        
+    }
+
+    .FindPassword {
+        display: flex;
+        flex-direction: column;
+        .TitleLabel {
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding-bottom: 0.25rem;
+        }
+        .TitleBorder {
+            height: 1px;
+            background: $oc-gray-7;
+        }
+
+        .FindForm {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            // width: 100%;
+            align-items: center;
+            margin-bottom: 1rem;
+            @include media("<=medium") {
+                flex-direction: column;
+            }
+            .Input {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                width: 100%;
+                input {
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    padding: 0.25rem;
+                    border: 1px solid $oc-gray-4;
+                    outline: none;
+                    @include media("<=medium") {
+                        width: 100%;
+                    }
+                }
+
+                input + input {
+                    margin-top: 1rem;
+                }
+            }
+            .Button {
+                margin-left: 2rem;
+                height: 100%;
+                background: $oc-gray-4;
+                padding-top: 1.75rem;
+                padding-bottom: 1.75rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                text-align: center;
+                font-size: 1.25rem;
+                color: white;
+                font-weight: 500;
+                cursor: pointer;
+                user-select: none;
+                &:hover {
+                    background: $oc-gray-5;
+                }
+                &:active {
+                    background: $oc-gray-4;
+                }
+                @include media("<=medium") {
+                    margin-left: 0;
+                    padding-top: 0.25rem;
+                    padding-bottom: 0.25rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+}

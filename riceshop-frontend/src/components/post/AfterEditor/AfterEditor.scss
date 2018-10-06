@@ -1,0 +1,60 @@
+
+@import 'utils';
+
+.editor {
+    width: 100%;
+    .editor-label {
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .editor-content {
+        .input-title {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: $oc-gray-4;
+            height: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .input-content {
+            background: $oc-gray-4;
+            border: none;
+            outline: none;
+            height: 10rem;
+            font-size: 1.3rem;
+            width: 100%;
+        }
+    }
+
+    .button-wrapper {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        .button {
+            font-size: 1.3rem;
+            background: $oc-teal-3;
+            color: white;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
+            border-radius: 2px;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover {
+                background: $oc-teal-4;
+            }
+
+            &:active {
+                background: $oc-teal-5;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+
+@import 'utils';
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $oc-gray-8;
+    margin-bottom: 1rem;
+    @include media("<=medium") {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}

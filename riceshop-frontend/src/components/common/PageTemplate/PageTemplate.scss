@@ -1,0 +1,15 @@
+
+@import 'utils';
+
+.page-template {
+    display: flex;
+    flex-direction: column;
+    main {
+        min-height: calc(100vh - 15rem);
+        background: $oc-gray-0;
+        @include media("<=medium") {
+            min-height: calc(100vh - 25rem);
+        }
+        // background: $oc-gray-1;
+    }
+}

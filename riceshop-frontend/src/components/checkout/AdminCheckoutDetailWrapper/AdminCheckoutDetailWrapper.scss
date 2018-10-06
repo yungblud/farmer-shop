@@ -1,0 +1,11 @@
+
+@import 'utils';
+
+.detail-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+
+    @include media("<=medium") {
+        width: 100%;
+    }
+}

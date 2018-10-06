@@ -1,0 +1,365 @@
+@import 'utils';
+.button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    user-select: none; // 드래그 방지
+    display: inline-flex;
+    &.default {
+        background: $oc-teal-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-teal-5;
+        }
+        &:active {
+            background: $oc-teal-6;
+        }
+    }
+    &.cancel {
+        background: $oc-red-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-red-5;
+        }
+        &:active {
+            background: $oc-red-6;
+        }
+    }
+    &.admin-default {
+        background: $oc-blue-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-blue-5;
+        }
+        &:active {
+            background: $oc-blue-6;
+        }
+    }
+    &.admin-default-cancel {
+        background: $oc-red-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-red-5;
+        }
+        &:active {
+            background: $oc-red-6;
+        }
+    }
+
+    &.admin-default-confirm {
+        background: $oc-blue-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-blue-5;
+        }
+        &:active {
+            background: $oc-blue-6;
+        }
+    }
+
+    &.admin-default-payback {
+        background: $oc-pink-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-pink-5;
+        }
+        &:active {
+            background: $oc-pink-6;
+        }
+    }
+
+    &.admin-payback {
+        background: $oc-red-6;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-red-5;
+        }
+        &:active {
+            background: $oc-red-6;
+        }
+    }
+    &.login {
+        background: $oc-green-7;
+        // padding-left: 11rem;
+        // padding-right: 11rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        // border-radius: 3px; // margin-left: 0.35rem;
+        margin-top: 1rem;
+        @include media("<medium") {
+            padding-left: 4rem;
+            padding-right: 4rem; // margin-left: 2.2rem;
+        } // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-green-6;
+        }
+        &:active {
+            background: $oc-green-7;
+        }
+    }
+    &.register {
+        background: $oc-teal-6;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px;
+        margin-left: 1.8rem;
+        margin-top: 1rem;
+        @include media("<medium") {
+            padding-left: 4rem;
+            padding-right: 4rem;
+            margin-left: 2.2rem;
+        } // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-teal-5;
+        }
+        &:active {
+            background: $oc-teal-6;
+        }
+    }
+    &.order {
+        background: $oc-teal-6;
+        padding-left: 19.5rem;
+        padding-right: 19.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px;
+        margin-left: 0.7rem;
+        margin-top: 1rem;
+        @include media("<medium") {
+            padding-left: 6rem;
+            padding-right: 6rem;
+            margin-left: 2.2rem;
+        } // border: 2px solid white;
+        // border-radius: 2px;
+        @include media("<=small") {
+            padding-left: 5rem;
+            padding-right: 5rem;
+            margin-left: 3.5rem;
+        }
+        &:hover {
+            background: $oc-teal-5;
+        }
+        &:active {
+            background: $oc-teal-6;
+        }
+    }
+    &.order-mobile {
+        background: $oc-green-7;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        @include media("<=medium") {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        // border-radius: 3px; // margin-left: 4rem;
+        margin-top: 1rem;
+        &:hover {
+            background: $oc-green-6;
+        }
+        &:active {
+            background: $oc-green-7;
+        }
+    }
+    &.remove {
+        background: $oc-gray-4;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-radius: 3px;
+        margin-left: 0.7rem;
+        margin-top: 1rem;
+        font-size: 0.75rem;
+        @include media("<medium") {
+            padding-left: 4rem;
+            padding-right: 4rem;
+            margin-left: 2.2rem;
+        } // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-gray-3;
+        }
+        &:active {
+            background: $oc-gray-4;
+        }
+    }
+    &.cart {
+        background: $oc-gray-6;
+        // padding-left: 2rem; // width: 100%;
+        text-align: center;
+        // padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        // margin-left: 0;
+        &:hover {
+            background: $oc-gray-5;
+        }
+        &:active {
+            background: $oc-gray-6;
+        }
+    }
+    &.pay {
+        background: $oc-teal-6;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            background: $oc-teal-5;
+        }
+        &:active {
+            background: $oc-teal-6;
+        }
+    }
+    &.delete {
+        background: $oc-red-6;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-red-5;
+        }
+        &:active {
+            background: $oc-red-6;
+        }
+    }
+    &.update {
+        background: $oc-blue-6;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-blue-5;
+        }
+        &:active {
+            background: $oc-blue-6;
+        }
+    }
+    &.payment {
+        background: $oc-blue-6;
+        margin-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px; // border: 2px solid white;
+        // border-radius: 2px;
+        &:hover {
+            background: $oc-blue-5;
+        }
+        &:active {
+            background: $oc-blue-6;
+        }
+    }
+    &.gray {
+        background: $oc-gray-7;
+        &:hover {
+            background: $oc-gray-6;
+        }
+        &:active {
+            background: $oc-gray-7;
+        }
+    }
+    &.setting {
+        background: $oc-blue-7;
+        &:hover {
+            background: $oc-blue-6;
+        }
+        &:active {
+            background: $oc-blue-7;
+        }
+    }
+
+    &.address {
+        background: $oc-blue-6;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 3px;
+        // margin-left: 1.8rem;
+        margin-top: 1rem;
+        @include media("<medium") {
+            // padding-left: 4rem;
+            // padding-right: 4rem;
+            // margin-left: 1rem;
+            // margin-right: 1rem;
+            // width: 90%;
+        } 
+        &:hover {
+            background: $oc-blue-5;
+        }
+        &:active {
+            background: $oc-blue-6;
+        }
+    }
+}

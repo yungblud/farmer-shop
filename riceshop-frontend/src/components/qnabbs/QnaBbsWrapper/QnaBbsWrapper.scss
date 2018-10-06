@@ -1,0 +1,101 @@
+
+@import 'utils';
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    @include media("<=medium") {
+        width: 95%;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        // margin-bottom: 1rem;
+        .write-button {
+            user-select: none;
+            background: $oc-blue-3;
+            color: white;
+            padding: 0.3rem;
+            border-radius: 2px;
+            font-weight: 500;
+            &:hover {
+               background: $oc-blue-4; 
+            }
+
+            &:active {
+                background: $oc-blue-5; 
+             }
+
+        }
+    }
+
+    .search-options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        @include media("<=medium") {
+            flex-direction: column;
+        }
+        .selector {
+            .search-selector {
+                height: 1.5rem;
+                font-size: 1rem;
+                margin-left: 1rem;
+
+                @include media("<=medium") {
+                    margin-left: 0;
+                    text-align: center;
+                }
+            }
+            @include media("<=medium") {
+                margin-bottom: 1rem;
+               
+            }
+        }
+
+        .input-wrapper {
+            margin-left: 1rem;
+            .input {
+                height: 2rem;
+                font-size: 1.5rem;
+                background: $oc-gray-3;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+            }
+            @include media("<=medium") {
+                margin-bottom: 1rem;
+            }
+        }
+        .button-wrapper {
+            margin-left: 1rem;
+            .search-button {
+                background: $oc-teal-3;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                border-radius: 2px;
+                font-weight: 500;
+                color: white;
+                user-select: none;
+                &:hover {
+                    background: $oc-teal-4;
+                }
+                &:active {
+                    background: $oc-teal-5;
+                }
+            }   
+        }
+    }
+}

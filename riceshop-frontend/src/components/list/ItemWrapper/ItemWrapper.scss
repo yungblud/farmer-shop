@@ -1,0 +1,32 @@
+
+@import 'utils';
+
+.item-wrapper {
+    display: flex;
+    
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    
+    // background: $oc-gray-3;
+    width: 920px;
+    flex-direction: column;
+    
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        // padding-left: 1rem;
+    }
+
+    @include media("<wide") {
+        width: 100%;
+    }
+
+
+    @include media("<medium") {
+        width: 100%;
+    }
+    & + & {
+        margin-top: 2rem;
+    }
+}

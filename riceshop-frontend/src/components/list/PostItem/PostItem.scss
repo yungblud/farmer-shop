@@ -1,0 +1,63 @@
+@import 'utils';
+.post-item {
+    overflow-x: auto;
+    .inner {
+        // display: flex;
+        flex-wrap: wrap;
+        display: block;
+        white-space: nowrap;
+         // flex-wrap: nowrap;
+        .item-card {
+            @include material-shadow(4, 0.5);
+            margin-bottom: 1rem;
+            display: inline-block;
+            cursor: pointer;
+            width: 220px;
+            height: 280px;
+            
+            @include media("<medium") {
+                width: 100px;
+                height: 180px;
+            }
+            @include media("<=small") {
+                width: 80px;
+                height: 160px;
+            }
+            .image {
+                width: 220px;
+                height: 220px;
+                @include media("<medium") {
+                    width: 100px;
+                    height: 100px;
+                }
+                @include media("<=small") {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            .info {
+                
+                .title {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-left: 1rem;
+                    
+                    @include media("<medium") {
+                        padding-left: 0.5rem;
+                    }
+                }
+                .price {
+                    padding-left: 1.5rem;
+                    @include media("<medium") {
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+            @include media("<medium") {}
+        }
+        .item-card+.item-card {
+            margin-left: 1rem;
+        }
+        @include media("<medium") {}
+    }
+}

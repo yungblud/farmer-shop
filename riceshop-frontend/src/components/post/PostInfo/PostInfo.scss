@@ -1,0 +1,194 @@
+@import 'utils';
+.post-info {
+    // width: 980px;
+    display: flex;
+    flex-direction: column; // justify-content: center;
+    // align-items: center;
+    // background: white;
+    margin: 0 auto;
+    // flex: 1;
+    // height: 100%;
+    // @include media("<medium") {
+    //     width: 100%;
+    // }
+    // @include media("<=small") {
+    //     width: 100%;
+    // }
+    .post-title {
+        display: flex;
+
+        justify-content: center;
+        
+        // margin-bottom: 1rem;
+        
+        padding: 2rem;
+        border-bottom: 1px solid $oc-gray-4;
+        @include media("<=medium") {
+            padding: 1rem;
+           
+        }
+        // background: $oc-gray-0;
+
+        .Text {
+            font-size: 2rem;
+            word-wrap: break-word;
+            font-weight: 800;
+            
+        }
+        
+    }
+    .info-wrapper {
+        @include media(">=medium") {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+        @include media("<medium") {
+            flex-direction: column; // height: calc(100vh - 15rem);
+        }
+        .thumbnail {
+            
+            ul {
+                padding-left: 0rem;
+            }
+
+            flex: 1;
+            .image {
+                width: 100%; // height: 100%;
+                height: 400px;
+                object-fit: contain;
+            }
+            padding: 1rem;
+            @include media("<=medium") {
+                // flex: 1.0;
+                padding: 0;
+            }
+        }
+        .infos {
+            display: flex;
+            flex-direction: column;
+            flex: 1; // align-items: center;
+            // margin-left: 2rem;
+            .info-box {
+                .options {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0.8;
+                    margin: 1rem;
+                    .label {
+                        font-size: 1.5rem;
+                    }
+
+                    .option-selector + .label {
+                        margin-top: 1rem;
+                    }
+                    .option-selector {
+                        width: 100%;
+                        height: 3rem;
+                        font-size: 2.0rem; // margin-bottom: 1rem;
+                        @include media("<medium") {
+                            height: 2rem;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .label + .NumberSelectorZone { 
+                        margin-top: 1rem;
+                    }
+                    .NumberSelectorZone {
+                        display: flex;
+                        .number-selector {
+                            width: 100%;
+                            height: 3rem;
+                            font-size: 2.0rem;
+                            border: 1px solid $oc-gray-5;
+                            outline: none;
+                            
+                            @include media("<medium") {
+                                height: 3rem;
+                                font-size: 2rem;
+                            }
+                        }
+
+                        .UpAndDown {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .Icons {
+                                font-size: 1.5rem;
+                                user-select: none;
+                                cursor: pointer;
+                            }
+
+                        
+                        }
+
+                        .number-selector + .UpAndDown {
+                            margin-left: 1rem;
+                        }
+                    }
+                    margin-bottom: 1rem;
+                }
+                .price {
+                    font-size: 1.5rem; // flex: 0.2;
+                    text-align: right;
+                    margin-right: 1rem;
+                }
+                .total-price {
+                    font-size: 1.5rem;
+                    margin-right: 1rem; // flex: 0.2;
+                    text-align: right;
+                }
+            }
+            .buttons {
+                display: flex;
+                flex-direction: column;
+               
+                @include media("<medium") {
+                    flex-direction: column;
+                }
+                margin-top: 2rem;
+                margin-bottom: 2rem; // flex: 0.2;
+                //    padding-top: 1rem;
+                // flex: 0.5;
+                .member-only {
+                    display: flex;
+
+                    .cart-button {
+                        flex: 0.5;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                    }
+                    .pay-button {
+                        flex: 0.5;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                    }
+                }
+                .admin-only {
+                    display: flex;
+                    .delete-button {
+                        flex: 0.5;
+                        display: flex;
+                        margin-top: 0.5rem;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .update-button {
+                        flex: 0.5;
+                        display: flex;
+                        margin-top: 0.5rem;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+

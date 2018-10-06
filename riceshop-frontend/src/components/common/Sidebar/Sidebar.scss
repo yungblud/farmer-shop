@@ -1,0 +1,32 @@
+
+@import 'utils';
+
+.top-menu {
+    .description {
+      font-size: 1.3rem;
+      color: white;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+}
+
+.menu {
+    // background: $oc-gray-5;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(85, 85, 85);
+    .menu-item {
+      
+      padding: 1rem;
+      padding-left: 1.5rem;
+      color: white;
+      font-size: 1.125rem;
+      &:active {
+        background: rgb(40, 40, 40);
+      }
+    }
+    .menu-item + .menu-item {
+      border-top: 1px solid rgb(85, 85, 85);
+    }
+  }

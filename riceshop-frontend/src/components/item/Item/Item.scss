@@ -1,0 +1,178 @@
+@import 'utils';
+.item-list {
+    // display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    // align-items: center;
+    // justify-content: center;
+    // align-items: center;
+    // background: $oc-gray-5;
+   
+    // width: 1024px;
+    // justify-content: center;
+    // align-items: center;
+    // overflow-x: auto;
+    // margin: 0 auto;
+
+        .one-line {
+            // width: 1024px;
+            display: flex;
+            flex-direction: row;
+            // margin-bottom: 1rem;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: center;
+            margin: 0 auto;
+            // justify-content: center;
+            // justify-content: space-evenly;
+            @include media("<=medium") {
+                white-space: nowrap;
+                display: block;
+                overflow-x: auto;
+                
+            }
+            // margin-left: 0.3rem;
+            
+            // width: calc(100% + 26px);
+            // flex-direction: column;
+            cursor: pointer;
+            // .item {
+               
+                // position: relative;
+                // @include media("<wide") {
+                //     width: 25%;
+                // }
+                // @include media("<=large") {
+                //     width: 50%;
+                // }
+                // @include media("<medium") {
+                //     width: 100%;
+                // }
+    
+                
+                .card {
+                    // background: white;
+                   
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    margin-left: 0.5rem;
+                    margin-right: 0.5rem;
+                    
+                    // margin-right: 1rem;
+                    // padding: 13px;
+                    
+                    @include material-shadow(2, 0.5);
+                    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+                    &:hover {
+                        @include material-shadow(3, 0.5);
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    width: 283px;
+                    
+                    // @include media("<=small") {
+                    //     margin: 0rem;
+                    //     margin-top: 1rem;
+                    // }
+    
+                    // @include media("<=large") {
+                    //     width: 310px;
+                    // }
+    
+                    @include media("<=medium") {
+                        width: 150px;
+                        display: inline-block;
+                        
+                    }
+                    
+    
+    
+                    
+                    // z-index: -1;
+                    .image {
+                        
+                        position: relative;
+                        width: 100%;
+                        
+                        height: 300px;
+                        @include media("<=medium") {
+                            height: 200px;
+                        }
+    
+                       
+    
+                        .thumbnail {
+    
+                            // z-index: -1;
+                            position: absolute;
+                            top: -0.5px;
+                            left: -0.5px;
+                            bottom: -4px;
+                            right: -0.3px;
+                            background: hsla(0,0%,100%,.25);
+                            background-size: cover;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 300px;
+                            object-fit: cover;
+                            @include media("<=medium") {
+                                width: 100%;
+                                height: 200px;
+                            }
+                        
+                        }
+                    }
+                    .info {
+                       
+                        // padding-left: 1rem;
+                        // background: $oc-blue-3;
+                        display:flex;
+                        flex-direction: column;
+                        .title {
+                            
+                            height: 40px;
+                            
+                            margin-left: 0.4rem;
+                            margin-top: 0.4rem;
+    
+                            @include media("<=medium") {
+                                margin-top: 0;  
+                                height: 45px;
+                            }
+                            display: flex;
+                            align-items: center;
+    
+                            .text {
+                                white-space: nowrap; 
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                font-size: 1.2rem;
+                            }
+    
+                           
+                        }
+                        .price {
+                            font-size: 1rem;
+                            margin-left: 0.6rem;
+                            margin-bottom: 1rem;
+    
+                            @include media("<=medium") {
+                                margin-bottom: 0.3rem;  
+                            }
+                        }
+                    }
+                }
+            // }
+        
+            // .item + .item {
+            //     margin: 1rem;
+            // }
+        }
+    
+        .one-line + .one-line {
+            margin-top: 1rem;
+        }
+
+}

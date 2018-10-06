@@ -1,0 +1,17 @@
+@import 'utils';
+
+.Wrapper {
+    width: 100%;
+    @include media("<=medium") {
+        width: 100%;
+    }
+    margin: 0 auto;
+
+    .Title {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        color: $oc-green-8;
+    }
+}

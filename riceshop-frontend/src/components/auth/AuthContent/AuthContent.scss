@@ -1,0 +1,40 @@
+
+@import 'utils';
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $oc-gray-8;
+    margin-bottom: 1rem;
+}
+
+.newbie {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    text-align: right;
+
+    .register {
+        color: $oc-blue-5;
+    }
+}
+
+.error {
+    color: $oc-red-5;
+    background: $oc-red-2;
+    padding: 0.3rem;
+    border: 1px solid $oc-red-4;
+
+    @include media("<=medium") {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    @include media("<=small") {
+        font-size: 0.8rem;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}

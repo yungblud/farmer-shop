@@ -1,0 +1,59 @@
+@import 'utils';
+.list-item {
+    // display: flex;
+    // flex-direction: row;
+  
+    .inner {
+        display: flex;
+        flex-direction: row;
+        // @include media("<mei")
+        flex-wrap: wrap;
+        position: relative;
+        // cursor: pointer;
+        align-items: center;
+        // justify-content: center;
+        // 
+        @include media("<=medium") {
+            justify-content: center;
+        }
+ 
+        .card {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            @include media("<=small") {
+                margin: 0rem;
+                margin-top: 1rem;
+            }
+            padding: 13px;
+            @include material-shadow(4, 0.5);
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+
+            @include media("<=large") {
+                width: 310px;
+            }
+            .image {
+                width: 100%;
+                height: 300px;
+                .thumbnail {
+                    width: 100%;
+                    height: 300px; // position: absolute;
+                    // top: -0.5px;
+                    // left: -0.5px;
+                    // bottom: -4px;
+                    // right: -0.3px;
+                    background: hsla(0, 0%, 100%, .25);
+                    background-size: cover;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        // .card + .card {
+        //     margin-left: 1rem;
+        // }
+    }
+}

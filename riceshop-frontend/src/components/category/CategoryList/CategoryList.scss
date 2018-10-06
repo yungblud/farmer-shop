@@ -1,0 +1,96 @@
+@import "utils";
+
+.List {
+  margin: 0 auto;
+  width: 90%;
+  @include media("<=medium") {
+    width: 100%;
+  }
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .ListLine {
+    width: calc(100% + 10px);
+    @include media("<=medium") {
+        width: calc(100%);
+    }
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    // margin: 0 auto;
+    // justify-content: center;
+    .Item {
+      cursor: pointer;
+      position: relative;
+      flex-basis: calc(25% - 1rem);
+      
+
+      @include media("<=medium") {
+        flex-basis: calc(33.333% - 1rem);
+      }
+
+    //   @include media("<=large") {
+    //       flex-basis: calc()
+    //   }
+
+      margin: 0.4rem;
+      border: 1px solid $oc-gray-3;
+      box-sizing: border-box;
+
+      @include material-shadow(2, 0.5);
+
+      &:hover {
+        @include material-shadow(3, 0.5);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      .Content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        .Thumbnail {
+          width: 100%;
+          height: 80%;
+          @include media("<=medium") {
+            height: 70%;
+          }
+          @include media("<=medium") {
+            height: 75%;
+          }
+          .Image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .Infos {
+        padding: 1rem;
+        @include media("<=medium") {
+          padding: 0.25rem;
+        }
+
+        .Title {
+          max-width: calc(100vh - 1.5rem);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @include media("<=medium") {
+            max-width: 80px;
+            font-size: 0.75rem;
+          }
+        }
+
+        .Price {
+        }
+      }
+    }
+  }
+}

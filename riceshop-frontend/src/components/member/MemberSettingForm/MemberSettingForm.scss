@@ -1,0 +1,71 @@
+@import 'utils';
+.form {
+    @include material-shadow(2, 0.5);
+    // border: 1px solid $oc-gray-5;
+    .form-contents {
+        padding: 1rem;
+        .row+.row {
+            margin-top: 1rem;
+        }
+        .row {
+            display: table;
+            width: 100%;
+            .name {
+                display: table-cell;
+                font-size: 1.25rem;
+                color: $oc-gray-8;
+                font-weight: 300;
+                width: 8rem;
+                vertical-align: middle;
+            }
+            .row-content {
+                display: table-cell;
+                @include media("<=medium") {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .input {
+                    padding: .25rem;
+                    font-size: 1.15rem;
+                    border: 1px solid $oc-gray-3;
+                    width: 40%;
+                   
+                }
+                .email-block {
+                    font-size: 1rem;
+                    color: #495057;
+                    display: table-cell;
+                }
+                .button-wrapper {
+                    padding-left: .5rem;
+                    @include media("<=medium") {
+                        padding-left: 0rem;
+                    }
+                    display: table-cell;
+                    .button {
+                        font-weight: 600;
+                        padding: .5rem;
+                        font-size: 1.15rem;
+                        border: 1px solid #adb5bd;
+                        cursor: pointer;
+                        @include media("<=medium") {
+                            text-align: center;
+                        }
+                    }
+                }
+                .lined-text {
+                    font-weight: 600;
+                    color: black;
+                    font-size: 1.15rem;
+                    display: inline-block;
+                    padding-bottom: .15rem;
+                    border-bottom: 2px solid #343a40;
+                    cursor: pointer;
+                    @include media("<=medium") {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

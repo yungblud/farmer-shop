@@ -1,0 +1,24 @@
+
+@import 'utils';
+
+.category-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    .category {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    @include media("<wide") {
+        width: 100%;
+        padding-left: 2rem;
+        
+    }
+
+    @include media("<medium") {
+        width: 100%;
+        padding-left: 0.5rem;
+    }
+}

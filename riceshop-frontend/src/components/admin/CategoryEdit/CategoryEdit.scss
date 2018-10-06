@@ -1,0 +1,68 @@
+@import "utils";
+
+.Wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  
+  @include media("<=medium") {
+      width: 100%;
+      padding: 0;
+      margin-top: 1rem;
+  }
+
+  .Content {
+    background: white;
+    @include material-shadow(2, 0.5);
+    display: flex;
+    flex-direction: column;
+    .Header {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+        border-bottom: 1px solid $oc-gray-5;
+      .HeaderCol {  
+            flex: 1;
+            text-align: center;
+            @include media("<=medium") {
+                font-size: 0.75rem;
+            }
+      }
+
+      .HeaderCol + .HeaderCol {
+
+      }
+    }
+    .Body {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        
+
+        .Line {
+            display: flex;
+            flex-direction: row;
+            .Col {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+    
+            
+        }
+        .Line + .Line {
+            border-top: 1px solid $oc-gray-3;
+        }
+    }
+  }
+
+  .Buttons {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;
+      padding-right: 0;
+  }
+}

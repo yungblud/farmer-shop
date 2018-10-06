@@ -1,0 +1,23 @@
+@import 'utils';
+
+.Wrapper {
+    width: 100%;
+    height: calc(100vh - 15rem);
+    @include media("<=medium") {
+        width: 100%;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    // background: $oc-gray-3;
+    .Content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        font-size: 1.5rem;
+        font-weight: 600;
+        
+    }
+}

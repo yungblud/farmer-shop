@@ -1,0 +1,54 @@
+@import 'utils';
+
+.question {
+  background: white;
+  padding: 2rem;
+  .title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .description {
+    margin-top: 0.25rem;
+  }
+
+  .errorMessage {
+      color: $oc-red-5;
+  }
+}
+
+.form-wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    .input {
+        height: 2rem;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        border: 1px solid $oc-gray-3;
+
+        &:focus {
+            border: 1px solid $oc-gray-7;
+        }
+        &:active {
+            border: 1px solid $oc-gray-6;
+        }
+    }
+    .input + .input {
+        margin-top: 0.5rem;
+    }
+}
+
+.options {
+  padding: 1rem;
+  background: $oc-gray-1;
+  text-align: right;
+  display: flex;
+    justify-content: flex-end;
+  .button-wrapper + .button-wrapper {
+      margin-left: 1rem;
+  }
+  
+}

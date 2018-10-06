@@ -1,0 +1,60 @@
+
+@import 'utils';
+
+.wrapper {
+    @include media("<medium") {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    margin-top: 1rem;
+    & + & {
+        margin-top: 1rem;
+    }
+
+    .label {
+        font-size: 1rem;
+        color: $oc-gray-6;
+        margin-bottom: 0.25rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .Text {
+
+        }
+
+        .Button {
+            margin-left: auto;
+            .Icon {
+                color: white;
+                background: $oc-gray-8;
+                padding: 0.25rem;
+                border-radius: 2px;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: $oc-gray-7;
+                }
+
+                &:active {
+                    background: $oc-gray-8;
+                }
+            }
+
+        }
+    }
+
+    .input {
+        width: 100%;
+        border: 1px solid $oc-gray-3;
+        outline: none;
+        border-radius: 0px;
+        line-height: 2.5rem;
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        height: 2.8rem;
+    }
+}

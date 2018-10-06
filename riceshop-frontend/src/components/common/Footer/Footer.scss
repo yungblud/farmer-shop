@@ -1,0 +1,88 @@
+@import 'utils';
+.footer {
+    background: $oc-gray-3;
+    display: flex;
+    flex-direction: column;
+    .footer-content {
+        min-height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // justify-content: center;
+        // flex-direction: column; // 위에서 아래로
+        // .logo {
+        //     font-weight: 600;
+        //     font-size: 2rem;
+        //     cursor: pointer;
+        //     color: $oc-gray-7;
+        // }
+
+        .TopLine {
+            margin-bottom: 2.5rem;
+            @include media("<=medium") {
+                margin-bottom: 1rem;
+            }
+            display: flex;
+            align-items: center;
+            @include media("<=medium") {
+                flex-direction: column;
+            }
+            .Item {
+                display: flex;
+                flex-direction: column;
+                
+                .Title {
+                    font-weight: 700;
+                    text-align: center;
+                    font-size: 1.25rem;
+                }
+    
+                .Bold {
+                    font-size: 2rem;
+                    color: $oc-green-7;
+                    font-weight: 800;
+                    text-align: center;
+
+                    @include media("<=medium") {
+                        font-size: 1.5rem;
+                    }
+                }
+    
+    
+                .Normal {
+                    text-align: center;
+                }
+    
+                .BankAccount {
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                }
+                padding-left: 1rem;
+                padding-right: 1rem;
+    
+                
+            }
+    
+            .Item + .Item {
+                @include media("<=medium") {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .BottomLine {
+            @include media("<=medium") {
+                display: none;
+            }
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .Line + .Line {
+                margin-top: 0.35rem;
+            }
+        }
+    }
+}

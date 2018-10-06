@@ -1,0 +1,420 @@
+@import 'utils';
+
+.no-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 8rem;
+    align-items: center;
+    .text {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    .button-wrapper {
+        margin-top: 1rem;
+        .button {
+            background: $oc-lime-4;
+            color: white;
+            padding-top: 0.25rem;
+            font-weight: 400;
+            font-size: 1.3rem;
+            padding-bottom: 0.25rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            user-select: none;
+            cursor: pointer;
+            border-radius: 2px;
+
+            &:hover {
+                background: $oc-lime-5;
+            }
+
+            &:active {
+                background: $oc-lime-4;
+            }
+        }
+    }
+}
+.cart-table {
+    width: 100%;
+    margin: 0 auto;
+    
+    .cart-content {
+        @include media("<=medium") {
+            display: none;
+        }
+        // background: $oc-gray-1;
+        display: flex;
+        flex-direction: column;
+        // border-bottom: 1px solid $oc-gray-5;
+        // padding: 2rem;
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .heading {
+                flex: 1;
+                padding: 0.25rem;
+                font-size: 0.75rem;
+                color: $oc-gray-7;
+                font-weight: 600;
+            }
+            .heading+.heading {
+                // border-left: 1px solid $oc-gray-5;
+            }
+            border-top: 1px solid $oc-gray-7;
+            border-bottom: 1px solid $oc-gray-5;
+        }
+        .body {
+            height: 100%;
+            .row {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                .content {
+                    flex: 1;
+                    // width: 100%;
+                    justify-content: center;
+                    padding: 1rem; // border-bottom: 1px solid $oc-gray-5;
+                    // display: flex;
+                    // align-items: center;
+                    .FirstColumn {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .ImageWrapper {
+                            .image {
+                                width: 100px;
+                                height: 100px;
+                                border: 1px solid $oc-gray-2;
+
+                                @include media(">wide") {
+                                    width: 200px;
+                                    height: 200px;
+                                }
+                            }
+                        }
+                        .TitleAndOption {
+                            text-align: center;
+                            width: 200px;
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                           
+                        }
+                    }
+
+                    .Text {
+                        text-align: center;
+                        // padding-left: 1rem;
+                    }
+
+                    .InputWrapper {
+                        // padding-left: 1.25rem;
+                        // flex: 1;
+                        // width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        .ChangableInput {
+                            width: 2.5rem;
+                            height: 2rem;
+                            font-size: 1.5rem;
+                            outline: none;
+                            border: 1px solid $oc-gray-4;
+                            text-align: center;
+                        }
+    
+                        .Button {
+                            margin-left: 1rem;
+                        }
+                        
+                    }
+
+                }
+                .content+.content {
+                    // border-left: 1px solid $oc-gray-5;
+                }
+
+                
+            }
+        }
+        
+    }
+    .cart-content-mobile {
+        @include media(">medium") {
+            display: none;
+        }
+        background: white;
+        width: 100%;
+       
+        
+        .line {
+            @include material-shadow(2, 0.5);
+            display: flex;
+            flex-direction: column;
+            
+            .Title {
+                display: flex;
+                justify-content: flex-start;
+                .Text {
+                    padding: 1rem;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+                border-bottom: 1px solid $oc-gray-5;
+            }
+
+            .ImageTitleAndOption {
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                .Image {
+                    width: 60px;
+                    height: 60px;
+                    
+                }
+
+                .Description {
+                    margin-left: 1rem;
+                    .ItemTitle {
+                        font-weight: 600;
+                        color: $oc-gray-7;
+                    }
+
+                    .ItemOption {
+                        font-weight: 600;
+                        color: $oc-gray-7;
+                    }
+                }
+            }
+
+            .AboutItem {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                .Line {
+                    display: flex;
+                    .Label {
+                        
+                    }
+
+                    .Price {
+                        display: flex;
+                        margin-left: auto;
+
+                        .Number {
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+
+            .RemoveButton {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                display: flex;
+                .remove-line {
+                    margin-left: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // flex: 0.1;
+                    .remove-mark {
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.5rem;
+                        .remove-button {
+                            background: $oc-red-4;
+                            color: white;
+                            font-weight: 500;
+                            padding-top: 0.25rem;
+                            padding-bottom: 0.25rem;
+                            padding-right: 2rem;
+                            padding-left: 2rem;
+                            border-radius: 2px;
+    
+                        }
+                    }
+                }
+            }
+            .left-line {
+                // flex: 0.3;
+                .thumbnail {
+                    // justify-content: center;
+                    // align-items: center;
+                    margin-right: 0.3rem;
+                    display: flex;
+                    justify-content: center;
+
+                    .image {
+                        // width: 100%;
+                        height: 5rem;
+                    }
+                }
+            }
+            .right-line {
+                // flex: 0.6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title {
+                    text-align: center;
+                }
+                .number {
+                    text-align: center;
+                }
+                .price {
+                    text-align: center;
+                }
+            }
+            .remove-line {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // flex: 0.1;
+                .remove-mark {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    .remove-button {
+                        background: $oc-red-4;
+                        color: white;
+                        font-weight: 500;
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                        padding-right: 2rem;
+                        padding-left: 2rem;
+                        border-radius: 2px;
+
+                    }
+                }
+            }
+        }
+
+        .line + .line {
+            border-top: 1px solid $oc-gray-6;
+        }
+    }
+    .InfoLine {
+        
+        .total-price {
+            margin-top: 2rem;
+            // text-align: right;
+            // font-size: 1.3rem;
+            // font-weight: 500;
+            border: 2px solid $oc-gray-3;
+            padding: 1rem;
+            display: flex;
+           
+            .Descriptions {
+                margin-left: auto;
+                display: flex;
+                @include media("<=medium") {
+                    flex-direction: column;
+                    // margin-left: 0;
+                }
+                .LeftDesc {
+                    display: flex;
+                    align-items: center;
+                    @include media("<=medium") {
+                        justify-content: right;
+                    }
+                    .Normal {
+                        color: $oc-gray-6;
+                    }
+                    .Bold {
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                    }
+                }
+                .PlusIcon {
+                    @include media("<=medium") {
+                        display: none;
+                    }
+                    display: flex;
+                    align-items: center;
+                    .Icon {
+                        font-size: 1.25rem;
+                    }
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+
+                .CenterDesc {
+                    @include media("<=medium") {
+                        margin-left: auto;
+                    }
+                    display: flex;
+                    align-items: center;
+                    .Normal {
+                        color: $oc-gray-6;
+                    }
+                    .Bold {
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                    }
+                }
+
+                .EqualIcon {
+                    @include media("<=medium") {
+                        display: none;
+                    }
+                    display: flex;
+                    align-items: center;
+                    .Icon {
+                        font-size: 1.25rem;
+                    }
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+                .RightDesc {
+                    @include media("<=medium") {
+                        margin-left: auto;
+                    }
+                    display: flex;
+                    align-items: center;
+                    .Normal {
+                        color: $oc-gray-8;
+                    }
+                    .Bold {
+                        font-size: 1.75rem;
+                        font-weight: 500;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .Bottom {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 0.25rem;
+        .order-button {
+            
+            display: flex;
+            justify-content: center;
+    
+            .Button {
+                margin-left: auto;
+                @include media("<=medium") {
+                    margin-left: none;
+                }
+            }
+        }
+
+        .order-button + .order-button {
+            margin-right: 1rem;
+            // @include media("<=medium") {
+            //     margin-right: 0rem;
+            // }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+
+@import 'utils';
+
+.post-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include media(">large") {
+        width: 80%;
+    }
+    @include media(">wide") {
+        width: 60%;
+    }
+    
+    background: $oc-gray-0;
+    .post-info {
+        // flex: 0.3;
+        height: 100%;
+    }
+
+    .post-body {
+        // flex: 0.7;
+        height: 100%;
+    }
+}

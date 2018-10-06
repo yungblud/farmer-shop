@@ -1,0 +1,71 @@
+
+@import 'utils';
+
+.admin-header {
+    background: $oc-blue-6;
+    .header-contents {
+        display: flex;
+        height: 3.5rem;
+        align-items: center;
+        .logo {
+            font-size: 2rem;
+            color: white;
+            margin: 1rem;
+            cursor: pointer;
+            @include media("<=medium") {
+                font-size: 0.8rem;
+            }
+        }
+
+        .right-pc {
+            margin-left: auto;
+            
+            .right-menu {
+                display: flex;
+                .menu-item {
+                    margin: 1rem;
+                    font-size: 1.3rem;
+                    color: white;
+                    cursor: pointer;
+                    @include media("<=medium") {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .menu-item + .menu-item {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .menu-pc {
+        display: flex;
+        background: $oc-blue-3;
+        overflow: auto;
+        white-space: nowrap;
+        .menu-item {
+            flex: 1;
+            text-align: center;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+
+            @include media("<=medium") {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+
+            &:hover {
+                background: $oc-blue-4;
+            }
+            &:active {
+                background: $oc-blue-3;
+            }
+        }
+
+        
+    }
+}

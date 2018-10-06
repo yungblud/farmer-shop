@@ -1,0 +1,116 @@
+
+@import 'utils';
+
+
+.table {
+    @include media("<=medium") {
+        display: none;
+    }
+
+
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include material-shadow(2, 0.5);
+    user-select: none;
+    padding: 1rem;
+
+
+    .empty-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .desc {
+            text-align: center;
+            padding: 1rem;
+            .text {
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .thead {
+        display: flex;
+        border-bottom: 1px solid $oc-gray-3;
+        height: 2.5rem;
+        align-items: center;
+        
+        .header-number {
+            flex: 0.3;
+            padding-left: 0.4rem;
+        }
+        .header {
+            display: table-cell;
+            flex: 1;
+        }
+
+        .header-date {
+            flex: 0.3;
+        }
+        .header-writer {
+            flex: 0.3;
+        }
+    }
+
+    .tbody {
+        display: flex;
+        flex-direction: column;
+        .row {
+            display: flex;
+            height: 2.5rem;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+                background: $oc-gray-2;
+            }
+            &:active {
+                background: $oc-gray-1;
+            }
+            .body {
+                flex: 1;
+            }
+
+            .body-slim {
+                flex: 0.3;
+                padding-left: 0.4rem;
+            }
+        }
+        .row-answer {
+            display: flex;
+            flex-direction: row;
+            height: 2.5rem;
+            align-items: center;
+            cursor: pointer;
+            
+            &:hover {
+                background: $oc-gray-2;
+            }
+            &:active {
+                background: $oc-gray-1;
+            }
+            .body {
+                flex: 1;
+                // padding-left: 1rem;
+            }
+
+            .body-slim {
+                flex: 0.3;
+                padding-left: 0.4rem;
+            }
+        }
+        .row + .row {
+            border-top: 1px solid $oc-gray-3;
+            
+        }
+        .row + .row-answer {
+            border-top: 1px solid $oc-gray-3;
+            
+        }
+        .row-answer + .row {
+            border-top: 1px solid $oc-gray-3;
+            
+        }
+    }
+}

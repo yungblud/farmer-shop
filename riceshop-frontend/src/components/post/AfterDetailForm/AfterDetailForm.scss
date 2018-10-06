@@ -1,0 +1,30 @@
+
+@import 'utils';
+
+.after-detail-form {
+    @include material-shadow(4, 0.5);
+    .contents {
+        padding: 2rem;
+        .label {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .table {
+            .title {
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+
+            .info-line {
+                text-align: right;
+                margin-bottom: 1rem;
+            }
+
+            .content {
+                border: 1px solid $oc-gray-3;
+                padding: 1rem;
+            }
+        }
+    }
+}

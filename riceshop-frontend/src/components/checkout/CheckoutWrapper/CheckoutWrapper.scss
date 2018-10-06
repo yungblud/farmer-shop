@@ -1,0 +1,83 @@
+
+@import 'utils';
+
+.checkout-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+
+    @include media("<=medium") {
+        width: 100%;
+    }
+
+    .option-selector {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        .options {
+            margin-left: auto;
+            background: white;
+            height: 2rem;
+            font-size: 1.5rem;
+            @include media("<=medium") {
+                height: 1.5rem;
+                font-size: 1rem;
+            }
+        
+        }
+
+
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        @include media(">medium") {
+            margin-right: 10rem;
+            margin-left: 10rem;
+        }
+        align-items: center;
+        margin-bottom: 1rem;
+
+        @include media("<=medium") {
+            flex-direction: column;
+            // align-items: center;
+        }
+        .search-selector {
+            margin-right: 1rem;
+            @include media("<=medium") {
+                margin-right: 0rem;
+                margin-bottom: 1rem;
+            }
+            .search-select {
+                height: 2rem;
+                font-size: 1.5rem;
+                background: white;
+
+                @include media("<=medium") {
+                    height: 1.5rem;
+                    font-size: 1rem;
+                    
+                }
+            }
+        }
+
+        .search {
+            height: 2rem;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+            background: $oc-gray-1;
+            margin: 0 auto;
+            @include media("<=medium") {
+                height: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .search-button{ 
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+
+@import 'utils';
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    .form {
+        @include material-shadow(4, 0.5);
+        margin-top: 1rem;
+        background: $oc-gray-2;
+        display: flex;
+        flex-direction: column;
+        
+        .form-contents {
+            display: flex;
+            align-items: center;
+            // margin-top: 1rem;
+            // margin-bottom: 1rem;
+            height: 3rem;
+            padding-left: 1rem;
+            .content {
+
+            }
+
+            .button-wrapper {
+                margin-left: auto;
+                margin-right: 0.35rem;
+                .button {
+                    background: $oc-blue-5;
+                    color: white;
+                    font-weight: 500;
+                    padding-left: 0.35rem;
+                    padding-right: 0.35rem;
+                    border-radius: 2px;
+                    user-select: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $oc-blue-6;
+                    }
+                    &:active {
+                        background: $oc-blue-7;
+                    }
+                }
+            }
+        }
+        .form-contents + .form-contents {
+            border-top: 1px solid black;
+            
+        }
+
+    }
+
+    .songjang-input {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .label {
+            margin-right: 0.5rem;
+        }
+        input {
+            height: 2rem;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+            background: $oc-gray-2;
+            
+        }
+
+        .button-wrapper {
+            margin-left: 1rem;
+            .button {
+                background: $oc-blue-5;
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                border-radius: 2px;
+                padding-left: 0.3rem;
+                padding-right: 0.3rem;
+                cursor: pointer;
+                user-select: none;
+                font-weight: 600;
+                color: white;
+            }
+        }
+    }
+
+    .complete-button {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+        
+    }
+
+    .complete-cancel-button {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        .Button {
+            padding: 1rem;
+        }
+        
+    }
+
+    .payback-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        
+    }
+}

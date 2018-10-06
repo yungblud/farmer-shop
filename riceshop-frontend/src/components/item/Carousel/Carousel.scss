@@ -1,0 +1,16 @@
+@import 'utils';
+
+.Carousel {
+    ul {
+        padding-left: 0rem;
+    }
+    .ImageWrapper {
+        img {
+            height: 500px;
+            object-fit: cover;
+            @include media("<=medium") {
+                height: 300px;
+            }
+        }
+    }
+}

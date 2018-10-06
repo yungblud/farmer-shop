@@ -1,0 +1,107 @@
+
+@import 'utils';
+
+.table {
+    @include media(">medium") {
+        display: none;
+    }
+    @include material-shadow(2, 0.5);
+
+    .empty-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .desc {
+            text-align: center;
+            padding: 1rem;
+            .text {
+                font-size: 1.25rem;
+                font-weight: 500;
+
+                @include media("<=small") {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        .row {
+            user-select: none;
+            &:hover {
+                background: $oc-gray-2;
+            }
+            &:active {
+                background: $oc-gray-3;
+            }
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-size: 1.3rem;
+            }
+           
+            .bottoms {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0.3rem;
+                .username {
+                    font-size: 1rem;
+                    padding: 0.3rem;
+                }
+                .date {
+                    border-left: 1px solid $oc-gray-2;
+                    font-size: 1rem;
+                    padding: 0.3rem;
+                }
+            }
+        }
+        .row-answer {
+            user-select: none;
+            &:hover {
+                background: $oc-gray-2;
+            }
+            &:active {
+                background: $oc-gray-3;
+            }
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-size: 1.3rem;
+            }
+           
+            .bottoms {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0.3rem;
+                .username {
+                    font-size: 1rem;
+                    padding: 0.3rem;
+                }
+                .date {
+                    border-left: 1px solid $oc-gray-2;
+                    font-size: 1rem;
+                    padding: 0.3rem;
+                }
+            }
+        }
+        .row + .row {
+            border-top: 1px solid $oc-gray-6;
+        }
+        .row-answer + .row {
+            border-top: 1px solid $oc-gray-6;
+        }
+        .row + .row-answer {
+            border-top: 1px solid $oc-gray-6;
+        }
+    }
+}

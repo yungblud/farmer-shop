@@ -1,0 +1,21 @@
+@import 'utils';
+
+.sidebar-wrapper {
+  transform: translate(0%);
+  transition: all 0.1s ease-in-out;
+  @include material-shadow(5,2);
+  &.hidden {
+    transform: translate(100%);
+    box-shadow: none;
+  }
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: $oc-gray-8;
+  height: 100%;
+  overflow-y: auto;
+  width: 300px;
+  z-index: 10;
+}

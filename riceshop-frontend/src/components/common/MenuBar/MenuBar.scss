@@ -1,0 +1,52 @@
+@import "utils";
+
+.MenuBar {
+  // @include media("<=medium") {
+  //     display: none;
+  // }
+
+  height: 3rem;
+  background: $oc-green-8;
+  display: flex;
+  justify-content: center;
+  .Line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include media("<=medium") {
+      overflow: auto;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .Menu {
+      cursor: pointer;
+       display: inline-block;
+    //    flex-direction: row;
+      .Text {
+        color: white;
+        font-weight: 400;
+        font-size: 1.25rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        
+        &:hover {
+          color: $oc-gray-8;
+        }
+        @include media("<=medium") {
+            padding-top: 1rem;
+            // padding: 1rem;
+            // font-size: 0.75rem;
+            // height: 100px;
+          }
+      }
+
+      
+    }
+
+    .Menu + .Menu {
+      // margin-left: 1rem;
+    }
+  }
+}
